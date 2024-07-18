@@ -1,0 +1,79 @@
+.footer{
+    background-color: var(--container-color);
+   
+}
+
+.footer__container{
+    padding: 2rem 0 0rem;
+}
+
+.footer__title,
+.footer__link{
+    color: var(--title-color);
+}
+
+.footer__title{
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+
+.footer__link:hover{
+    color: var(--title-color-dark);
+}
+
+.footer__link{
+    color: var(--title-color-dark);
+}
+
+.footer__list{
+    display: flex;
+    margin-left: 1rem;
+    justify-content: center;
+    column-gap: 2rem;
+    margin-bottom: var(--mb-2);
+}
+
+.footer__social{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.footer__social-link{
+    background-color: var(--title-color);
+    color: var(--container-color);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    justify-content: center; /* SVG'yi yatayda ortalar */
+    align-items: center; /* SVG'yi dikeyde ortalar */
+}
+
+.footer__social-link:hover{
+    background-color: var(--title-color-dark);
+}
+
+.footer__copy{
+
+
+display: block;
+margin-top: 2rem;
+color: var(--title-color);
+text-align: center;
+font-size: var(--smaller-font-size);
+}
+
+@media screen and (max-width:992px) {
+.footer__social-link{
+padding: 0.25rem;
+border-radius: 0.25rem;
+font-size:24px;
+justify-content: center; /* SVG'yi yatayda ortalar */
+align-items: center; /* SVG'yi dikeyde ortalar */
+
+   }
+
+}
+   

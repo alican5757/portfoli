@@ -1,0 +1,212 @@
+.home__content {
+    display: grid;
+    grid-template-columns: 116px repeat(2, 1fr);
+    width: 100%; /* Tam genişlik */
+    height: 100%; /* Tam yükseklik */
+    padding-top: 4rem;
+    grid-gap: 2rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.home__social {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 1rem;
+}
+
+.home__social-icon {
+    font-size: 1rem;
+    color: var(--title-color);
+    transition: color 0.3s ease;
+}
+
+.home__social-icon:hover {
+    color: var(--title-color-dark);
+}
+
+.home__title {
+    font-size: 3.1rem;
+    margin-bottom: var(--mb-0-25);
+}
+
+.home__hand { /* Corrected class name */
+    width: 38px;
+    height: 38px;
+    margin-left: 0.4rem;
+}
+
+.home__subtitle {
+    position: relative;
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-weight-normal);
+    padding-left: 4rem;
+}
+
+.home__subtitle::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--text-color);
+    left: 0;
+    top: 1rem;
+    z-index: 0;
+}
+
+.home__description {
+    max-width: 400px;
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.home__img {
+    background: url("../../assets/MY.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.3);
+    order: 1;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+    animation: profile_animate 8s ease-in-out infinite 1s;
+    will-change: border-radius;
+}
+
+@keyframes profile_animate {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+.home__scroll {
+    margin-left: 9.25rem;
+    margin-top: 2rem;
+   
+}
+
+.wheel {
+    animation: scroll 2s ease infinite;
+    will-change: transform;
+}
+
+@keyframes scroll {
+    0%, 30% {
+        transform: translateY(3.25rem);
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+}
+
+.home__scroll-name {
+    color: var(--title-color);
+    font-weight: var(--font-weight-normal);
+    margin-right: var(--mb-0-25);
+    margin-left: 2px;
+}
+
+.home__scroll-arrow {
+    color: var(--title-color);
+    font-size: 1.25rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Horizontal centering for the button */
+}
+
+@media screen and (max-width: 992px) {
+    .home__content {
+        grid-template-columns: 100px repeat(2, 1fr);
+        grid-gap: 1.25rem;
+    }
+
+    .home__hand { /* Corrected class name */
+        width: 26px;
+        height: 26px;
+    }
+
+    .home__title {
+        font-size: 2.6rem;
+    }
+
+    .home__subtitle {
+        padding-left: 3.75rem;
+    }
+
+    .home__subtitle::before {
+        width: 42px;
+        top: 0.8rem;
+    }
+
+    .home__description {
+        max-width: initial;
+        margin-bottom: var(--mb-2-5);
+    }
+
+    .home__img {
+        width: 250px;
+        height: 250px;
+        box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.3);
+        margin-left: -1rem;
+    }
+
+    .home__scroll {
+        margin-left: 7.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home__content {
+        grid-template-columns: 0.5fr 3fr;
+        grid-gap: 3.5rem;
+    }
+
+    .home__img {
+        order: initial;
+        justify-self: initial;
+        width: 200px;
+        height: 200px;
+        box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.3);
+    }
+
+    .home__data {
+        grid-column: 1 / -1; /* Ensure spanning across all columns */
+    }
+
+    .home__scroll {
+        display: none; /* Hide scroll on smaller screens */
+    }
+
+    .button {
+        display: flex;
+        justify-content: center; /* Center button horizontally */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .home__img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .home__hand { /* Corrected class name */
+        width: 22px;
+        height: 22px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center; /* Center button horizontally */
+    }
+}

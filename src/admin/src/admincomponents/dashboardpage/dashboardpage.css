@@ -1,0 +1,33 @@
+/* DashboardPage.css */
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--container-color);
+}
+
+.main__content {
+
+  width: 100%;
+  height: calc(100vh - var(--header-height) - 3rem);
+ 
+  display: flex;
+  flex-direction: column; /* İçerik dikey hizalandı */
+  padding: 2rem;
+}
+
+.main__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1); /* Başlık ve altındaki boşluk azaltıldı */
+ justify-self: start;
+}
+
+.main__subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  text-align: center; /* İçerik metni merkezde hizalandı */
+  margin-bottom: var(--mb-2);
+}

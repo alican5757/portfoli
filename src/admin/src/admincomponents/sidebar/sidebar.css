@@ -1,0 +1,53 @@
+/* Sidebar.css */
+
+.sidebar {
+    background-color: var(--container-color);
+    color: var(--title-color);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15rem; /* Sabit genişlik */
+    z-index: 100; /* Öncelik */
+}
+
+.sidebar__logo {
+    margin-top: var(--mb-1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: var(--mb-1) 0; /* Yatay ve dikey boşluklar */
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+}
+
+.sidebar__nav ul {
+    padding: 0;
+    margin: 0; /* Liste içi boşlukları kaldırma */
+    list-style-type: none;
+}
+
+.sidebar__nav ul li {
+    padding: var(--mb-1) var(--mb-1-5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar__nav ul li a {
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    display: flex; /* İçerikleri yatay hizalama */
+    align-items: center; /* İçerikleri dikeyde ortala */
+    padding: 0.5rem 20px; /* Ayrıca, kenar boşluklarını ekledik */
+}
+
+.sidebar__nav ul li a i {
+    margin-right: 10px; /* İkon ile metin arasına boşluk bırakma */
+}
+
+.sidebar__nav ul li a:hover {
+    color: var(--title-color-dark);
+    background-color: var(--body-color); /* Hover rengini değiştirdik */
+}
